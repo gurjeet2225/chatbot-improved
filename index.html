@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brave Buddy Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <img src="images/bulb_default.png" class="mascot" id="mascot" alt="Mascot">
+      
+      <header class="chat-header">
+        <h1>🌟 Brave Buddy 🌟</h1>
+        <p>Your friendly AI assistant</p>
+      </header>
+      <div class="controls">
+        <button id="langToggle" class="control-btn">🌐 Language</button>
+        <button id="voiceBtn" class="control-btn">🔊 Voice ON</button>
+        <button id="micBtn" class="control-btn">🎤 Speak</button>
+        <select id="voiceSelect" class="control-btn"></select>
+      </div>
+      <section class="chat-messages" id="chat" role="log" aria-live="polite">
+          </section>
+      <div class="bot-typing" id="bot-typing">
+        <span></span><span></span><span></span>
+      </div>
+      <form class="chat-composer" id="composer" autocomplete="off">
+        <textarea id="input" placeholder="Type your message here..." required></textarea>
+        <button class="send-btn" type="submit" aria-label="Send Message">▶</button>
+      </form>
+    </div>
+
+
+    <audio id="bgMusic" src="meditation.mp3" loop></audio>
+    <audio id="clickSound" src="chime.mp3" preload="auto"></audio>
+    <audio id="clapSound" src="clap.mp3" preload="auto"></audio>
+    <audio id="sirenSound" src="siren.mp3" preload="auto"></audio>
+
+    <template id="message-template">
+      <div class="msg"><div class="bubble"></div></div>
+    </template>
+
+    <script src="app.js"></script>
+    <script src="modal.js"></script> </body>
+</html>
